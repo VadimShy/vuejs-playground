@@ -1,0 +1,16 @@
+$minWidthSize: 1390px;
+$maxWidthSize: 1440px;
+
+@media (min-width: $minWidthSize) and (max-width: $maxWidthSize) {
+  #apologize-message {
+    display: none;
+  }
+}
+
+#apologize-message {
+  color: gray;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+}

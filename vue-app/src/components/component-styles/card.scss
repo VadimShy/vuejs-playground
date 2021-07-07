@@ -1,0 +1,33 @@
+.card {
+  border-radius: 5%;
+  overflow: hidden;
+  width: 540px;
+  height: 590px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+
+  &__text {
+    width: 440px;
+    height: 195px;
+  }
+
+  &__title {
+    font-family: Avenir Next Cyr;
+    font-size: 32px;
+    font-weight: bolder;
+    line-height: 39px;
+    color: #8e9ad5;
+
+    margin: 20px 0px 0px 50px;
+  }
+
+  &__title-text {
+    font-family: Avenir Next Cyr;
+    font-size: 21px;
+    line-height: 1.5em;
+
+    margin: 10px 0px 0px 50px;
+  }
+}

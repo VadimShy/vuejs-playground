@@ -1,0 +1,31 @@
+.pill {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  width: 180px;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  border: 1px solid gray;
+
+  background: white;
+  box-shadow: 0px 0px 16px rgba(131, 42, 64, 0.4);
+  border-radius: 40px;
+
+  &__emoji {
+    width: 60px;
+    height: 60px;
+  }
+
+  &__counter {
+    text-align: center;
+    width: 100px;
+    font-weight: bold;
+    font-size: 50px;
+  }
+}

@@ -1,0 +1,125 @@
+$fontFamily: Avenir Next Cyr;
+
+.separator {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-top: 1px solid #d9d9d9;
+  height: 2px;
+  flex-basis: 100%;
+}
+
+.result-element {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+
+  &__percents {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 150px;
+    font-family: $fontFamily;
+    font-size: 48px;
+    line-height: 59px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #424242;
+  }
+
+  &__product {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: $fontFamily;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+
+    color: #424242;
+  }
+}
+
+.main {
+  width: 580px;
+
+  &__container {
+    position: absolute;
+    top: 280px;
+    left: 130px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+}
+
+.result {
+  position: absolute;
+  top: 460px;
+  left: 130px;
+  display: flex;
+  flex-direction: column;
+}
+
+.result-text-1 {
+  margin: 0;
+  font-family: $fontFamily;
+  font-size: 32px;
+  font-weight: bolder;
+  color: #8e9ad5;
+}
+
+.result-text-2 {
+  margin: 0;
+  font-family: $fontFamily;
+  font-size: 50px;
+  font-weight: bolder;
+  color: #8e9ad5;
+}
+
+.result-text-3 {
+  font-family: $fontFamily;
+  font-size: 24px;
+  line-height: 29px;
+  color: #424242;
+}
+
+.image-end {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.home-button {
+  width: 70px;
+  height: 70px;
+  border: 0;
+  position: absolute;
+  left: 50px;
+  top: 70px;
+
+  background: linear-gradient(63.53deg, #2d8550 16.62%, #5e6ec2 83.38%);
+  border-radius: 100%;
+}
+
+.home-button-2 {
+  position: absolute;
+  top: 880px;
+  left: 130px;
+
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+
+  height: 60px;
+  width: 280px;
+
+  border-radius: 100px;
+  border: 0;
+  background: linear-gradient(90deg, #d9d9d9 0%, #a1a1a1 100%);
+}

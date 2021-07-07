@@ -1,0 +1,136 @@
+$minWidthSize: 1390px;
+$maxWidthSize: 1440px;
+
+@media (min-width: $minWidthSize) and (max-width: $maxWidthSize) {
+  #main {
+  }
+}
+
+@media (max-width: $minWidthSize - 1) {
+  #main {
+    display: none;
+  }
+}
+
+@media (min-width: $maxWidthSize + 1) {
+  #main {
+    display: none;
+  }
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: linear-gradient(
+    63.53deg,
+    rgba(45, 133, 80, 0.7) 16.62%,
+    rgba(94, 110, 194, 0.7) 83.38%
+  );
+}
+
+.content {
+  grid-area: content;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-areas: "sidebar content";
+  background-color: #fff;
+  color: #444;
+  height: 100%;
+}
+
+.roundButton-home {
+  background-image: url(./assets/house.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  margin: 70px 20px 0px 50px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.roundButton-reset {
+  background-image: url(./assets/recycle.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50% 50%;
+  border: none;
+  margin: 70px 0px 0px 10px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.side-wrapper {
+  width: 470px;
+  height: 1024px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container-wrapper {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.container-content {
+  position: absolute;
+  top: 130px;
+  left: 690px;
+}
+
+.buttons-bottom {
+  position: absolute;
+  top: 870px;
+  padding-left: 60px;
+  padding-bottom: 64px;
+}
+
+.counter-container {
+  height: 134px;
+}
+
+.pill-header {
+  padding-left: 40px;
+  margin-bottom: 5px;
+  width: 390px;
+  height: 40px;
+  left: 40px;
+  top: 430px;
+
+  font-family: Avenir Next Cyr;
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: bolder;
+
+  color: #ffffff;
+}
+
+.pill-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.nav-container {
+  height: 100px;
+}

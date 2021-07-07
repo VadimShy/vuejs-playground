@@ -1,0 +1,33 @@
+.Rectangle {
+  color: white;
+  font-weight: bolder;
+
+  height: 90px;
+  width: 270px;
+
+  border-radius: 100px;
+  font-size: 28px;
+
+  border-radius: 100px;
+  border: 0;
+}
+
+.purple {
+  background: linear-gradient(266.19deg, #8049c7 0%, #ca57fd 100%);
+  margin-right: 40px;
+}
+
+.yellow {
+  background: linear-gradient(
+    90deg,
+    #ffd748 0.02%,
+    rgba(195, 199, 11, 0.96) 99.97%,
+    #cac6ab 99.98%,
+    #d3e9e1 99.99%
+  );
+}
+
+.blue {
+  background: linear-gradient(266.19deg, #169ae4 0%, #0cc4fa 100%);
+  margin-right: 40px;
+}

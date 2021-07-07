@@ -1,0 +1,17 @@
+.counter {
+  font-family: Avenir Next Cyr, serif;
+  text-align: center;
+  height: 134px;
+  background: rgba(205, 214, 219, 0.3);
+  color: white;
+  font-size: 30px;
+
+  &__text {
+    padding-top: 30px;
+    margin: 0px 0px 4px 0px;
+  }
+
+  &__numbers {
+    font-size: 40px;
+  }
+}
