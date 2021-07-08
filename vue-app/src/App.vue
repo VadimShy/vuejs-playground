@@ -33,6 +33,9 @@
           <div class="container-content">
 
             <Card
+              draggable="true"
+              @dragstart="onDragging"
+              @dragend="drop"
               :class="cardClassObject"
               :image="getImage()"
               :title="getTitle()"
@@ -109,6 +112,8 @@ export default {
       totalSteps: PERSONAS.length,
 
       cardState: 0,
+      dragStart: { x: 0, y: 0 },
+      dragEnd: { x: 0, y: 0 },
     };
   },
   methods: {
@@ -175,6 +180,22 @@ export default {
     },
     computePercents(value) {
       return Math.round((this[value] / this.totalSteps) * 100);
+    },
+    onDragging({ x, y }) {
+      this.dragStart = { x, y };
+    },
+    drop({ x, y }) {
+      this.dragEnd = ({ x, y });
+      const deltaX = this.dragEnd.x - this.dragStart.x;
+      const deltaY = this.dragEnd.y - this.dragStart.y;
+      const isVertMove = Math.abs(deltaX) / Math.abs(deltaY) < 1;
+      if (isVertMove) {
+        this.increaseHappy();
+      } else if (deltaX < 0) {
+        this.increaseSad();
+      } else {
+        this.increaseLove();
+      }
     },
   },
 };
