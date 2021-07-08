@@ -25,5 +25,11 @@ const PERSONAS = [
     description: 'У мене часто невралгії, лікар призначив вітаміни групи В. Мені потрібен якісний аналог за прийнятною ціною.\n',
   },
 ];
-
+export const TIMEOUT = 500;
+export const CARD_STATES = {
+  DEFAULT: 'default',
+  LEFT: 'left',
+  RIGHT: 'right',
+  TOP: 'top',
+};
 export default PERSONAS;

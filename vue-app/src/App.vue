@@ -31,7 +31,13 @@
       <div class="box content">
         <div class="container-wrapper">
           <div class="container-content">
-            <Card :image="getImage()" :title="getTitle()" :text="getDescription()"/>
+
+            <Card
+              :class="cardClassObject"
+              :image="getImage()"
+              :title="getTitle()"
+              :text="getDescription()"
+            />
           </div>
           <div class="buttons-bottom">
             <RectangleButton
@@ -67,7 +73,7 @@ import Counter from './components/Counter.vue';
 import WelcomeScreen from './components/WelcomeScreen.vue';
 import ResultScreen from './components/ResultScreen.vue';
 import Fallback from './components/Fallback.vue';
-import PERSONAS from './utils/constants';
+import PERSONAS, { TIMEOUT, CARD_STATES } from './utils/constants';
 
 export default {
   name: 'App',
@@ -81,6 +87,15 @@ export default {
     ResultScreen,
     Fallback,
   },
+  computed: {
+    cardClassObject() {
+      return {
+        'animation-left': this.cardState === CARD_STATES.LEFT,
+        'animation-top': this.cardState === CARD_STATES.TOP,
+        'animation-right': this.cardState === CARD_STATES.RIGHT,
+      };
+    },
+  },
   data() {
     return {
       isStarted: true,
@@ -92,6 +107,8 @@ export default {
 
       currentStep: 0,
       totalSteps: PERSONAS.length,
+
+      cardState: 0,
     };
   },
   methods: {
@@ -116,16 +133,28 @@ export default {
       }
     },
     increaseSad() {
-      this.increaseStep();
-      this.sadClicks += 1;
+      this.cardState = CARD_STATES.LEFT;
+      setTimeout(() => {
+        this.cardState = CARD_STATES.DEFAULT;
+        this.increaseStep();
+        this.sadClicks += 1;
+      }, TIMEOUT);
     },
     increaseHappy() {
-      this.increaseStep();
-      this.happyClicks += 1;
+      this.cardState = CARD_STATES.TOP;
+      setTimeout(() => {
+        this.cardState = CARD_STATES.DEFAULT;
+        this.increaseStep();
+        this.happyClicks += 1;
+      }, TIMEOUT);
     },
     increaseLove() {
-      this.increaseStep();
-      this.loveClicks += 1;
+      this.cardState = CARD_STATES.RIGHT;
+      setTimeout(() => {
+        this.cardState = CARD_STATES.DEFAULT;
+        this.increaseStep();
+        this.loveClicks += 1;
+      }, TIMEOUT);
     },
     reset() {
       this.sadClicks = 0;
@@ -155,4 +184,5 @@ export default {
 @import './normalize.scss';
 @import './fonts.scss';
 @import './app.scss';
+@import './animations';
 </style>

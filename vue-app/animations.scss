@@ -1,0 +1,51 @@
+.animation-left {
+  animation: keyframes-left 0.3s forwards;
+  position: relative;
+  left: 0;
+  top:0;
+}
+
+.animation-right {
+  animation: keyframes-right 0.3s forwards;
+  position: relative;
+  left: 0;
+  top:0;
+}
+
+.animation-top {
+  animation: keyframes-top 0.3s forwards;
+  position: relative;
+  left: 0;
+  top:0;
+}
+
+@keyframes keyframes-left {
+  from {
+    opacity: 1
+  }
+  to {
+    opacity: 0;
+    left: -200px;
+  }
+}
+
+
+@keyframes keyframes-right {
+  from {
+    opacity: 1
+  }
+  to {
+    opacity: 0;
+    left: 200px;
+  }
+}
+
+@keyframes keyframes-top {
+  from {
+    opacity: 1
+  }
+  to {
+    opacity: 0;
+    top: -200px;
+  }
+}
