@@ -1,18 +1,14 @@
-$minWidthSize: 1390px;
-$maxWidthSize: 1440px;
+$minWidthSizeDesktop: 1390px;
+$minWidthSizeTablet: 710px;
+$maxWidthSizeTablet: 768px;
 
-@media (min-width: $minWidthSize) and (max-width: $maxWidthSize) {
-  #main {
-  }
-}
-
-@media (max-width: $minWidthSize - 1) {
+@media (max-width: $minWidthSizeTablet - 1) {
   #main {
     display: none;
   }
 }
 
-@media (min-width: $maxWidthSize + 1) {
+@media (min-width: $maxWidthSizeTablet + 1) and (max-width: $minWidthSizeDesktop - 1) {
   #main {
     display: none;
   }
@@ -133,4 +129,40 @@ html {
 
 .nav-container {
   height: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .side-wrapper {
+    width: 220px;
+  }
+
+  .pill-header {
+    padding-left: 5%;
+    margin-bottom: 5px;
+  }
+
+  .nav-container {
+    height: 50px;
+  }
+
+  .counter-container {
+    height: 150px;
+  }
+
+  .roundButton-home {
+    margin: 70px 20px 0px 25px;
+  }
+  .container-content {
+    position: absolute;
+
+    top: 70px;
+    left: 275px;
+  }
+
+  .buttons-bottom {
+    position: absolute;
+    top: 670px;
+    padding-left: 120px;
+    padding-bottom: 64px;
+  }
 }

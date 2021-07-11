@@ -1,7 +1,14 @@
-$minWidthSize: 1390px;
-$maxWidthSize: 1440px;
+$minWidthSizeDesktop: 1390px;
+$minWidthSizeTablet: 710px;
+$maxWidthSizeTablet: 768px;
 
-@media (min-width: $minWidthSize) and (max-width: $maxWidthSize) {
+@media (min-width: $minWidthSizeDesktop) {
+  #apologize-message {
+    display: none;
+  }
+}
+
+@media (min-width: $minWidthSizeTablet) and (max-width: $maxWidthSizeTablet) {
   #apologize-message {
     display: none;
   }

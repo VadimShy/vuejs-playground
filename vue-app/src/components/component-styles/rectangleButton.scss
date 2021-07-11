@@ -31,3 +31,10 @@
   background: linear-gradient(266.19deg, #169ae4 0%, #0cc4fa 100%);
   margin-right: 40px;
 }
+
+@media screen and (max-width: 768px) {
+  .purple,
+  .blue {
+    margin-bottom: 20px;
+  }
+}

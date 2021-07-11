@@ -123,3 +123,32 @@ $fontFamily: Avenir Next Cyr;
   border: 0;
   background: linear-gradient(90deg, #d9d9d9 0%, #a1a1a1 100%);
 }
+
+@media screen and (max-width: 768px) {
+  .image-end {
+    height: 30%;
+    width: 40%;
+  }
+
+  .main {
+    width: 580px;
+
+    &__container {
+      top: 330px;
+    }
+  }
+
+  .result {
+    position: absolute;
+    top: 500px;
+    left: 130px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home-button-2 {
+    position: absolute;
+    top: 780px;
+    left: 33%;
+  }
+}
